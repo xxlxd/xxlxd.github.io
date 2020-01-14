@@ -1,0 +1,79 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<style>
+#button{
+		width: 150px;
+		height: 30px;
+		background: rgba(0,0,0,.1);
+		border:solid #ccc 1px;
+		border-radius: 3px;
+	}
+#button:hover{
+		cursor: pointer;
+		background:#D8D8D8;
+}
+body {
+background-image:url(timg.jpg);
+background-repeat:no-repeat;
+background-size:100% 100%;
+background-attachment: fixed;" 
+}
+</style
+</head>
+<body>
+<ul>
+                <li>
+                There are forty students in our class．That’s twenty．three boys and ________ girls．
+				<p><input type="radio" name="vehicleid" value="a"/>A．sixteen</p>
+				<p><input type="radio" name="vehicleid" value="b"/>B．seventeen</p>
+				<p><input type="radio" name="vehicleid" value="c"/>C．eighteen</p>
+				<p><input type="radio" name="vehicleid" value="d"/>D．nineteen</p>
+				</li>
+				
+				<li>
+				---____________?<br />---Very good. I like it very much.
+				<p><input type="radio" name="vehicleid2" value="a"/>A．What do you like it</p>
+				<p><input type="radio" name="vehicleid2" value="b"/>B．How do you think of it?</p>
+				<p><input type="radio" name="vehicleid2" value="c"/>C．What do you think of it</p>
+				<p><input type="radio" name="vehicleid2" value="d"/>D．May I help you</p>
+				</li>
+				
+				<li>
+				—_________________________________________________?<br />—I’d love to, but I am very busy these days.
+				<p><input type="radio" name="vehicleid3" value="a"/>A．Would you like to go to a concert with me</p>
+				<p><input type="radio" name="vehicleid3" value="b"/>B．Do you like going to concerts</p>
+				<p><input type="radio" name="vehicleid3" value="c"/>C．When do you go to a concert</p>
+				<p><input type="radio" name="vehicleid3" value="d"/>D．Let’s go to a concert</p>
+				</li>
+				<p id="demo"></p>
+				<button type="button" id="button" onclick="myFunction()">提交答案</button>
+				<button type="button" id="button" onclick="window.location.href='option3.html'">下一页</button>
+                <ul>
+<script>
+function myFunction() {
+
+var cars = ["b", "b", "a"];
+var k=0;
+var s='';
+var radios = document.getElementsByTagName("input");
+for (var i = 0; i < radios.length; i++) {
+if(i % 4 ==0 && i != 0){
+k++;
+}
+if(radios[i].checked && radios[i].type==='radio'){
+if(radios[i].value===cars[k]){
+s=s + (k+1) + '.√ ';
+}
+else{
+s=s + (k+1) + '.× ';
+}
+}
+}
+document.getElementById("demo").innerHTML = s;
+}
+</script>
+</body>
+</html>
